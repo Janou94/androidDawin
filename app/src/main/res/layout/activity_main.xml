@@ -16,7 +16,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/easyMode"
         android:layout_width="40dp"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
