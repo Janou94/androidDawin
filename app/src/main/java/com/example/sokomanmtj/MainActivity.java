@@ -14,12 +14,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.easyMode);
+        Button button = (Button) findViewById(R.id.buttonStart);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, MovementButtons.class);
+                Intent myIntent = new Intent(MainActivity.this, LevelChoose.class);
                 //myIntent.putExtra("key", value); //Optional parameters
                 MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button quit = (Button) findViewById(R.id.buttonQuit);
+        quit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                MainActivity.this.finish();
+                System.exit(0);
             }
         });
     }

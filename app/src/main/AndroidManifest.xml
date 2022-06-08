@@ -13,6 +13,9 @@
             android:name=".MovementButtons"
             android:exported="false" />
         <activity
+            android:name=".LevelChoose"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
