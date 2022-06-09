@@ -1,7 +1,5 @@
 package com.example.sokomanmtj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +12,8 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,7 +79,7 @@ public class MovementButtons extends AppCompatActivity {
         btnReset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent myIntent = new Intent(MovementButtons.this, MovementButtons.class);
-                //myIntent.putExtra("key", value); //Optional parameters
+                myIntent.putExtra("map", map); //Optional parameters
                 MovementButtons.this.startActivity(myIntent);
             }
         });
@@ -87,7 +87,7 @@ public class MovementButtons extends AppCompatActivity {
         Button btnMenu = (Button) findViewById(R.id.btnMenu);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myIntent = new Intent(MovementButtons.this, MainActivity.class);
+                Intent myIntent = new Intent(MovementButtons.this, LevelChoose.class);
                 //myIntent.putExtra("key", value); //Optional parameters
                 MovementButtons.this.startActivity(myIntent);
             }
